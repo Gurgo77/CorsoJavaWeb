@@ -1,22 +1,22 @@
 public class Giocattolo{
     private static Integer codiceProgressivo = 1;
-    private int id;
+    private String id;
     private String nome;
     private int prezzo;
     private int etaConsigliata;
 
     public Giocattolo(String n, int p, int e){
-        id = codiceProgressivo;
+        id = "GIOC_"+codiceProgressivo;
         nome = n;
         prezzo = p;
         etaConsigliata = e;
         codiceProgressivo++;
     }
 
-    public int getId() {
+    public String getId(){
         return id;
     }
-
+    
     public String getNome() {
         return nome;
     }
@@ -27,10 +27,6 @@ public class Giocattolo{
 
     public int getEtaConsigliata() {
         return etaConsigliata;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public void setNome(String nome) {
