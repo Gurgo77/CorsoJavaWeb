@@ -2,6 +2,9 @@ import java.util.*;
 
 public class TestGiocattolo {
     public static void main(String[] args) {
+        ConnessioneDB conn = new ConnessioneDB("jdbc:mysql://localhost:3306/Giocattolaio", "root","BaIoCcHi_77");
+
+
         Scanner s = new Scanner(System.in);
         ArrayList<Cliente> clienti = new ArrayList<Cliente>();
         int menuLogin = 1000;
