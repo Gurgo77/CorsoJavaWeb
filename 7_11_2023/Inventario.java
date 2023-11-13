@@ -6,10 +6,6 @@ import java.util.ArrayList;
 public class Inventario {
     private ArrayList<Giocattolo> giocattoli;
     private static boolean generato = false;
-    private String DB_DRIVER = "com.mysql.jdbc.Driver";
-    private String url = "";
-    private String username = "il_tuo_utente";
-    private String password = "la_tua_password";
         
     public Inventario(String admin){
         if(admin.equals("CLIE_2")){
@@ -27,15 +23,9 @@ public class Inventario {
             if(admin.equals("CLIE_2")){
             giocattoli.add(g);
             System.out.println("Giocattolo aggiunto correttamente!!!");
-            try{
-                Connection conn = DriverManager.getConnection(url, username, password);
-                conn.close();
-            }catch(SQLException e){
-                e.printStackTrace();
-            }
-        }else{
-            System.out.println("Non hai i permessi per utilizzare questa classe!!!");
-            return;
+            }else{
+                System.out.println("Non hai i permessi per utilizzare questa classe!!!");
+                return;
             }
         }else{
             System.out.println("L'inventario non esiste ancora!!!");
